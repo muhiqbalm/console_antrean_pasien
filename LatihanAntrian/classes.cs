@@ -34,7 +34,6 @@ namespace LatihanAntrian
             if (arrNoUrut[n - 1] != 0)
             {
                 Console.WriteLine("\nBerikut info mengenai pasien nomor urut {0}", n);
-                Console.WriteLine("Nomor Urut : " + arrNoUrut[n - 1]);
                 Console.WriteLine("Nama Pasien : " + arrNama[n - 1]);
                 Console.WriteLine("Usia Pasien : " + arrUsia[n - 1] + " tahun");
                 Console.Write("\n");
