@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +14,6 @@ namespace LatihanAntrian
 
     public class antreanPasien : pasien
     {
-        public string nomorUrut { get; set; }
-
-        public int[] arrNoUrut = new int[50];
         public string[] arrNama = new string[50];
         public int[] arrUsia = new int[50];
 
@@ -31,7 +28,7 @@ namespace LatihanAntrian
             Console.Write("\nMasukkan Nomor Urut Pasien : ");
             int n = int.Parse(Console.ReadLine());
 
-            if (arrNoUrut[n - 1] != 0)
+            if (arrUsia[n - 1] != 0)
             {
                 Console.WriteLine("\nBerikut info mengenai pasien nomor urut {0}", n);
                 Console.WriteLine("Nama Pasien : " + arrNama[n - 1]);
@@ -48,7 +45,6 @@ namespace LatihanAntrian
         {
             if (count <= 50)
             {
-                arrNoUrut[count - 1] = count;
                 Console.WriteLine("\nMasukkan Informasi Pasien");
 
                 Console.WriteLine("Nomor Urut Pasien : {0}", count);
@@ -82,7 +78,7 @@ namespace LatihanAntrian
             antrian.Dequeue();
         }
 
-        public void printAntrian()
+        public void printAntrean()
         {
             Console.WriteLine("\nBerikut adalah daftar antrean pasien dari nomor urut 1 : ");
             foreach (var i in antrian)
