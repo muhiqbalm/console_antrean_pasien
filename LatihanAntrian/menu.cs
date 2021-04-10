@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace LatihanAntrian
     {
         public bool status = true;
         serviceAntreanPasien Pasien = new serviceAntreanPasien();
-       
+
         public void showMenu()
         {
             do
@@ -24,27 +24,27 @@ namespace LatihanAntrian
                 Console.Write("Pilihan Anda : ");
                 string opsi = Console.ReadLine();
 
-                if(opsi=="1")
+                if (opsi == "1")
                 {
                     Pasien.addPasien();
                     showMenu();
                 }
-                else if(opsi=="2")
+                else if (opsi == "2")
                 {
                     Pasien.majuPasien();
                     showMenu();
                 }
-                else if(opsi=="3")
+                else if (opsi == "3")
                 {
                     Pasien.showInfoPasien();
                     showMenu();
                 }
-                else if(opsi=="4")
+                else if (opsi == "4")
                 {
-                    Pasien.printAntrian();
+                    Pasien.printAntrean();
                     showMenu();
                 }
-                else if(opsi=="5")
+                else if (opsi == "5")
                 {
                     status = false;
                 }
